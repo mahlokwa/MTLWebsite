@@ -4,10 +4,21 @@
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100px; /* Adjust height as needed */
+    position: relative;
+    z-index: -1;
 }
 
 .logo {
     width: 180px; /* Set image width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 70%; /* Optional: Makes the image circular */
+}
+.background {
+    background-image: url('back2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    min-height: calc(100vh - 100px)
+  
 }
