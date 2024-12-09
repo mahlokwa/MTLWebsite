@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mtltladiaccountants.org</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+	<!--Css styling-->
+    <style>
+
+	body {
+            
+           margin: 0;
+          
+    	   font-family: Times New Roman, sans-serif;
+  
+	   font-weight:normal;     
+ 	}
+        
+	.content {
+          
+   	   color: white;
+           
+   	   text-align: center;
+            
+   	   padding: 50px;
+            
+  	   background: rgba(0, 0, 0, 0.5);        
+   	   border-radius: 10px;
+          
+   	   display: inline-block;
+           
+   	   margin: 20px auto;
+        
+	}
+
+	
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: rgb(34,139,34);
+            color: #fff;
+	    z-index:1000;
+	    position: fixed;
+          
+	    top: 0;
+ 
+	    width: 98%;
+        }
+	<!--This is the company name on the footer-->
+        .company-name {
+            font-size: 1.2em;
+            font-weight: medium;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+	<!--For the footer at the bottom-->
+	footer {
+    
+           background-color: rgb(34,139,34);
+      
+           color: #fff;
+        
+           text-align: center;
+            
+	   padding: 5px 7px;
+            
+	   position: fixed;
+          
+	   bottom: 0;
+           
+	   width: 100%;
+            
+	   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        
+	}
+
+	<!--Code for the tiles under services-->
+	.tile-container {
+            display: flex; /* Flexbox to align tiles on the same line */
+            gap: 15px; /* Space between tiles */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+	    margin-bottom: 15px; /* Adds space below each container */
+	    justify-content: space-between; <!--Added just now-->
+        }
+
+        /* Individual tile styling */
+        .tile {
+    
+		flex: 1 1 calc(25% - 15px); /* Flex properties to set 4 tiles per row */
+    
+		max-width: calc(25% - 15px); /* Adjust width for 4 per row */
+   
+        	min-width: 150px; /* Ensures tiles aren't too small */
+   
+        	height: 100px; /* Sets the height of each tile */
+    
+        	background-color: #4CAF50; /* Tile background color */
+    
+        	color: white; /* Text color */
+    
+        	display: flex; /* Centers content inside */
+    
+        	justify-content: center; /* Centers horizontally */
+    
+        	align-items: center; /* Centers vertically */
+    
+        	text-align: center;
+    
+        	border-radius: 8px; /* Rounded corners */
+    
+        	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+
+	}
+
+
+        <!-- Still for the tiles-->
+        @media (max-width: 768px) {
+    
+	.tile {
+        
+		flex: 1 1 calc(50% - 15px); /* 2 tiles per row on smaller screens */
+       
+                max-width: calc(50% - 15px);
+    }
+	}
+
+
+
+	@media (max-width: 480px)
+	{
+    
+	.tile {
+        
+		flex: 1 1 100%; /* 1 tile per row on very small screens */
+       
+	         max-width: 100%;
+    }
+
+	}
+
+	<!--Css for the social media icons at the contact us section-->
+	
+	.social-icons {
+    		display: flex;
+    		justify-content: center;
+    		gap: 10px;
+    		margin-top: 20px;
+	}
+
+	.social-icons .icon {
+    		text-decoration: none;
+    		color: #fff;
+    		background-color: #333;
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		width: 50px;
+    		height: 50px;
+    		border-radius: 50%;
+    		transition: background-color 0.3s ease, transform 0.3s ease;
+	}
+
+	.social-icons .icon i {
+	       font-size: 20px;
+	}
+
+	.social-icons .icon:hover {
+	        transform: scale(1.1);
+	}
+
+	.facebook:hover {
+    		background-color: #3b5998;
+	}
+
+	.instagram:hover {
+    		background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
+	}
+
+	.twitter:hover {
+    		background-color: #1da1f2;
+	}
+
+	.youtube:hover {
+    		background-color: #ff0000;
+	}
+
+	.linkedin:hover {
+	         background-color: #0077b5;
+	}
+
+    </style>
+
+
+</head>
+<body>
+
+        <!--Header Section-->
+    <header>
+        <div class="company-name">MTL Accountants (Pty) Ltd</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contacts</a>
+        </nav>
+    </header>
+
+  	<!--Footer Section-->
+    <footer>
+       
+	 &copy; 2024 MTL Tladi Accountants (Pty) Ltd | All rights reserved.   
+    </footer>
+	
+    <div style="text-indent: 0px; margin-left: 8px;"> /* indenting all the text inwards */
+    <h6>-</h6>
+    <h2>About us</h2>
+    <div style="text-indent: 0px; margin-left: 8px;">
+
+    <h4>
+	We provide business solutions in finance specializing mainly in Acccounting, Tax and Payroll management.
+	Our industry experts offer services </br> categorized under six broad categories with years of experience and
+	remarkable accolades
+    </h4>
+    </div>
+
+    <h2>What we offer</h2>
+
+    <div style="text-indent: 0px; margin-left: 8px;">
+    <h4>
+       Accounting and Reporting Solutions- Ensuring the financial position and 
+       perfomance of the business is effectively communicated according to industry standards</br>
+        
+    </h4>
+    <div style="text-indent: 0px; margin-left: 20px;">
+    <h4>
+        Compilation of interim/annual financial statements</br>
+        Monthly accounting journal maintenance</br>
+        Monthly management accounts</br>
+        Analysis of financial reports</br>
+     </h4>
+     </div>
+     
+    </h4>
+    <h4>
+     	Bookkeeping Solutions - Ensuring up-to-date records of transactions are maintained according to industry & global standards.
+    </h4>
+
+    <div style="text-indent: 0px; margin-left: 20px;">
+    <h4>
+        Bank Processing</br>
+        Bank reconciliation</br>
+        Invoice processing</br>
+        Supplier and customer reconciliations
+     </h4>
+     </div>
+     
+     <h4>
+     	Independent Reviews Solutions - Ensuring limited assurance of your annual financial statements providing peace
+	of mind </br> compliance with international financial reporting (IFRS) and bookkeeping standards. Assure the qualitative and
+	quantitative quality of annual financial statements 
+     </h4>
+     
+     <h4>
+     	Taxation Solutions - Ensuring compliance with the South African Revenue Services (SARS) legislations and 
+	national company standards
+     </h4> 
+
+     
+     <!--Code for the table-->
+    
+     <div style="text-indent: 0px; margin-left: 15px;">
+     <table border="1">
+        <tr>
+            <th>Income tax returns</th>
+            <th>Payroll</th>
+            <th>Value Added Tax (VAT)</th>
+        </tr>
+        <tr>
+            <td>Income Tax Registration</td>
+            <td>PAYE Registration</td>
+            <td>VAT Registration</td>
+        </tr>
+        <tr>
+            <td>IRP 6 Returns</td>
+            <td>EMP 201 Submissions</td>
+            <td>VAT 201 Returns</td>
+        </tr>
+        <tr>
+            <td>ITR 14 Returns</td>
+            <td>EMP 501 Submissions</td>
+            <td>VAT Schedule</td>
+        </tr>
+	<tr>
+            <td>ITR 12 Returns (Personal Tax)</td>
+	</tr>
+	<tr>
+	    <td>Tax Compliance</td>
+	</tr>
+	<style>
+    	table {
+        	border-collapse: collapse;
+        	width: 75%;
+		height: 160px
+    	}
+    	th, td {
+        	border: 1px solid black;
+        	padding: 8px;
+        	text-align: left;
+    	}
+    	th {
+        	background-color: rgb(34,139,34);
+    	}
+    	</style>
+    	</table>
+    	</div>
+
+        <h4>
+     		Payroll Solutions - Ensuring proper employee information storage, security and processing
+    	</h4>
+
+    	<div style="text-indent: 0px; margin-left: 20px;">
+    	<h4>
+       		Payroll data capturing</br>
+        	Payslips</br>
+        	UIF Declarations</br>
+  		</h4>
+    	</div>
+     
+    	<h4>
+     		Business Advisory - Offering financial solutions for startup and established businesses for short-term </br>
+		& long term operations
+    	</h4> 
+    	<div style="text-indent: 0px; margin-left: 20px;">
+    	<h4>
+        	Workmen Compensation Registration</br>
+        	Business Plan</br>
+        	Company Registration</br>
+        	CIPC Annual Returns</br>
+     	</h4>
+     	</div>
+
+     <h2>Services</h2>
+  
+     <div class="tile-container">
+        <div class="tile"><h3>Company Registrations</br></h3></div>
+        <div class="tile"><h3>Business Profiles</h3></div>
+        <div class="tile"><h3>Accounting & Bookkeeping</h3></div>
+        <div class="tile"><h3>Tax Returns Filing</h3></div>
+    </div>
+    <div class="tile-container">
+	<div class="tile"><h3>Cashflow Forecasting</h3></div>
+	<div class="tile"><h3>Accounting Letter</h3></div>
+	<div class="tile"><h3>COIDA</h3></div>
+	<div class="tile"><h3>Management Accounts</h3></div>
+    </div>
+    <div class="tile-container">
+	<div class="tile"><h3>Annual Duties</h3></div>
+	<div class="tile"><h3>Payroll Administration</h3></div>
+	<div class="tile"><h3>Financial Statements</h3></div>
+	<div class="tile"><h3>Consultancy Services</h3></div>
+    </div>
+   
+
+     <h2>Get in touch with us</h2>
+
+     <h4>
+     <div style="text-indent: 0px; margin-left: 10px;">
+     <p><i class="fas fa-phone-alt"></i> Cellphone: +27 67 256 2160</p>
+    
+     <p><i class="fas fa-envelope"></i> Email: mtltladi@gmail.com</p>
+     <p><i class="fas fa-location"></i> Location: 91 Hans van Rensburg, Polokwane, 0700
+     </h4>
+     </div>
+	
+    <div class="social-icons">
+    <a href="https://facebook.com" target="_blank" class="icon facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" class="icon instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" class="icon twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://youtube.com" target="_blank" class="icon youtube">
+        <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://linkedin.com" target="_blank" class="icon linkedin">
+        <i class="fab fa-linkedin-in"></i>
+    </a> 
+    </div>
+
+
+
+     <h6>Copyright Proudly South African. All rights reserved.</h6>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
