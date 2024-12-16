@@ -13,30 +13,34 @@
  <body>
      <style>
   
-	body {
-
-		background-color: white;; /* Background color of the page */
-            
-		color: black; /* Optional: Text color for readability */
-            
-		font-family: Arial, sans-serif; /* Optional: Set a font style */
-        
-	}
+	
     
 	</style>
  
      <header class ="title">
-        <img src="C:\Users\lenovo\Desktop\WeB Development\MTL Accountants\HeaderB.jpg" alt="Logo" width="900" height="180">
-	<h4>Accounting firm based in Pietersburg South Africa</h4>
-     </header>
+        <img src="RLogo.jpg" alt="Logo" class = "logo">
+	<!--<h4>Accounting firm based in Pietersburg South Africa</h4>-->
      
-    <nav class=" menu-bar" style="display: flex;">
+     <div class=" menu_bar">
+        <div class="menu_icon"  id="menu_icon">
+            &#9776;
+     </div>
+    <nav class=" nav_links" id = "nav_links">
+      <ul>
         <li><a href="home"> Home</a></li>
-        <li><a href="about">About</a></li>
+        <li><a href="index.html">About</a></li>
         <li><a href="services">Services</a></li>
-        <li><a href="contactus">Contact Us</a></li>
+        <li><a href="contacts">Contact Us</a></li>
+      </ul>
     </nav>
-    
+    </div>
+   </header>
+   <script> 
+     document.getElementById("menu_icon").addEventListener("click", function(){
+        var navLinks = document.getElementById("nav_links");
+        navLinks.classList.toggle("active");
+     });
+   </script>
     <!--Adding the information on the sheets-->
   <h4>Our services are categorized under six broad categories</h4>
   
@@ -111,19 +115,7 @@
 	    <td>Tax Compliance</td>
 	</tr>
 	<style>
-    table {
-        border-collapse: collapse;
-        width: 75%;
-	height: 160px
-    }
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-    }
-    th {
-        background-color: lightgreen;
-    }
+    
 </style>
 
     </table>

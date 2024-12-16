@@ -1,24 +1,110 @@
 .title {
-    background-color: rgb(17, 140, 145); /* Set the background color to blue */
+    background-color: rgb(17, 140, 145); /* Set the background color */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100px; /* Adjust height as needed */
-    position: relative;
-    z-index: -1;
+    position: relative; /* Ensure proper stacking context */
+    z-index:auto; /* Place it above background (not -1) */
 }
 
 .logo {
-    width: 180px; /* Set image width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 70%; /* Optional: Makes the image circular */
+    width: 170px; /* Set image width */
+    height: 104px; /* Maintain aspect ratio */
+    border-radius: 70%; /* Makes the image circular */
+    object-fit: cover;
 }
+
 .background {
     background-image: url('back2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
-    min-height: calc(100vh - 100px)
-  
+    min-height: calc(100vh - 100px); /* Ensure it fills remaining viewport below header */
+}
+
+body {
+    background-color: white; /* Background color of the page */
+    color: black; /* Text color for readability */
+    font-family: Arial, sans-serif; /* Font style */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+body::before {
+    content: ""; /* Required for pseudo-element */
+    position: fixed; /* Fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it covers the entire width */
+    height: 100%; /* Ensure it covers the entire height */
+    background-image: url("back2.png"); /* Background image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-size: cover; /* Scale image to cover the area */
+    background-attachment: fixed; /* Fix image position */
+    opacity: 0.5; /* Adjust transparency */
+    z-index: -1; /* Ensure it stays behind the content */
+}
+
+table {
+    border-collapse: collapse; /* Remove gaps between borders */
+    width: 75%; /* Table width */
+    height: 160px; /* Table height */
+    margin: 20px auto; /* Center the table with margin */
+}
+
+th, td {
+    border: 1px solid black; /* Table cell borders */
+    padding: 8px; /* Cell padding */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: rgb(21, 100, 165); /* Header background color */
+    color: white; /* Header text color for contrast */
+}
+.menu_bar{
+    display: flex;
+    justify-content: space_between;
+    align-items:center;
+    position: relative;
+}
+.menu_icon{
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+
+}
+
+.nav_links{
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+.nav-links ul{
+    display: block;
+
+}
+
+.nav_links li a{ 
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    background-color:rgb(21, 100, 165);
+    transition: background-color 0.3s;
+
+}
+ 
+.nav_links li a :hover{
+    background-color: rgb(145, 17, 17);
+}
+
+.nav_links.active{
+    display: block;
 }
